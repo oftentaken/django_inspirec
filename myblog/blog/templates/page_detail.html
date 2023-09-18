@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="page">
+        <h1 class="center-text">{{ page.title }}</h1>
+        <div class="page-content">
+            {{ page.content | safe }}
+        </div>
+        <div class="article-list">
+            {% for article in page.articles.all %}
+                {% if article.slug %}
+                    <div class="article">
+                        <a href="{% url 'article_detail' slug=article.slug %}">
+                            <div class="article-image">
+                                <img src="{{ article.image.url }}" alt="{{ article.title }}">
+                            </div>
+                        </a>
+                        <h2 class="article-title">{{ article.title }}</h2>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

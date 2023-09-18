@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>InspiREC - Marcin Brzozowski</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                {% for item in menu_items %}
+                    <li><a href="{{ item.get_link }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="footer-content">
+        &copy; {% now "Y" %} Inspi<span class="highlight">REC</span>
+    </div>
+    </footer>
+</body>
+</html>

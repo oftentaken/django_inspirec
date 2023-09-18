@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <article class="article-detail">
+        <h1 class="article-title">{{ article.title }}</h1>
+        <div class="article-image-container">
+            <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-image">
+        </div>
+
+        <div class="article-content">
+            <p>{{ article.content }}</p>
+        </div>
+
+        {% if article.youtube_link %}
+        <div class="youtube-link">
+            <h2>Watch on YouTube</h2>
+            <a href="{{ article.youtube_link }}" target="_blank">Link to YouTube Video</a>
+        </div>
+        {% endif %}
+    </article>
+</div>
+{% endblock %}

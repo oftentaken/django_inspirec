@@ -1,0 +1,9 @@
+<h1>{{ real_estate_page.title }}</h1>
+<p>{{ real_estate_page.content }}</p>
+
+<h2>Articles:</h2>
+<ul>
+    {% for article in articles %}
+        <li><a href="{% url 'article_detail' slug=article.slug %}">{{ article.title }}</a></li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Galleries</h1>
+  <ul>
+    {% for gallery in galleries %}
+      <li><a href="{% url 'image_list' gallery.id %}">{{ gallery.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
