@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Deluge\Desktop\Python\PythonProjects\InspiREC_Django\venv"
+VIRTUAL_ENV="C:\Users\Deluge\Desktop\Python\PythonProjects\Django_InspiREC\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

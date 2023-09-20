@@ -16,6 +16,7 @@
                 <img src="{% static 'images/logo.png' %}" alt="Logo">
             </a>
         </div>
+        <!-- Regular Menu (hidden on small screens) -->
         <nav class="menu">
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -23,6 +24,10 @@
                     <li><a href="{{ item.get_link }}">{{ item.title }}</a></li>
                 {% endfor %}
             </ul>
+        <!-- Mobile Menu Icon -->
+        <div class="menu-toggle">
+            <img id="mobile-menu-toggle" class="menu-icon" src="{% static 'images/menu-icon.png' %}" alt="Menu">
+        </div>
         </nav>
     </header>
     <main>
@@ -34,5 +39,6 @@
         &copy; {% now "Y" %} Inspi<span class="highlight">REC</span>
     </div>
     </footer>
+    <script src="{% static 'menu.js' %}"></script>
 </body>
 </html>

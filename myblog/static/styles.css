@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
@@ -24,10 +24,10 @@ header {
     align-items: center;
 }
 
+/* Responsive Menu Styles */
 .menu {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
-    text-align: center; /* Center the menu items horizontally */
 }
 
 .menu ul {
@@ -35,7 +35,6 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
 }
 
 .menu li {
@@ -50,6 +49,97 @@ header {
 
 .menu a:hover {
     color: #555;
+}
+
+/* Style for the menu icon */
+.menu-icon {
+    display: none; /* Hide the menu icon by default */
+    width: 30px; /* Adjust the size as needed */
+    height: 30px;
+    cursor: pointer;
+    margin-left: auto; /* Move the icon to the right */
+    order: 2; /* Change the order to make the icon appear on the right */
+    align-self: center; /* Vertically center the icon with the logo */
+}
+
+/* Show the menu icon on small screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-icon {
+        display: inline-block; /* Show the menu icon on small screens */
+    }
+
+    /* Hide the regular menu on small screens */
+    .menu ul {
+        display: none;
+    }
+
+    /* Style the mobile menu when it's open */
+    .menu.open ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff; /* Add background color to menu for better visibility */
+        position: absolute;
+        top: 60px; /* Adjust the top position to align with header */
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+/* Hide the dropdown menu on screens wider than 768px */
+@media (min-width: 769px) {
+    .dropdown-menu {
+        display: none;
+    }
+}
+/* Style the mobile menu when it's open */
+.menu.open ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    position: absolute; /* Change to absolute */
+    top: 60px; /* Adjust the top position to align with header */
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-top: none; /* Remove the top border */
+    z-index: 1000; /* Add z-index to ensure it appears above other content */
+}
+
+/* Adjust the spacing between menu items */
+.menu.open ul li {
+    margin: 10px 0; /* Add margin to all sides of menu items */
+}
+
+/* Center header content on small screens */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    /* Adjust footer placement on smaller screens */
+    footer {
+        text-align: center;
+        position: fixed; /* Change to fixed to make it sticky */
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    /* Adjust content margin to prevent overlap with footer */
+    main {
+        margin-bottom: 2rem;
+        padding-bottom: 3rem; /* Add padding to make space for the footer */
+    }
 }
 
 .logo img {
@@ -145,14 +235,97 @@ header {
     color: red;
 }
 
-/* Keep the footer at the bottom of the page and centered */
+/* Footer Placement */
 footer {
     background-color: #f8f8f8;
     padding: 1rem;
     text-align: center;
     width: 100%;
-    position: absolute;
+    position: fixed; /* Change to fixed to make it sticky */
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+
+/* Adjust content margin to prevent overlap with footer */
+main {
+    margin-bottom: 2rem; /* Adjust as needed */
+}
+
+/* Center header content on small screens */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    /* Adjust footer placement on smaller screens */
+    footer {
+        text-align: center;
+        position: fixed; /* Change to fixed to make it sticky */
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    /* Adjust content margin to prevent overlap with footer */
+    main {
+        margin-bottom: 2rem;
+        padding-bottom: 3rem; /* Add padding to make space for the footer */
+    }
+}
+
+
+.article-detail {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.article-detail .article-title {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.article-detail .article-image-container {
+    text-align: center;
+}
+
+.article-detail .article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.article-detail .article-content {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+.article-detail .youtube-link {
+    margin-top: 2rem;
+    text-align: center; /* Center the text */
+}
+
+.article-detail .youtube-link h2 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.article-detail .youtube-link a {
+    display: inline-block;
+    padding: 8px 16px; /* Adjust button padding for smaller size */
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px; /* Adjust button font size for smaller size */
+}
+
+.article-detail .youtube-link a:hover {
+    background-color: #0056b3;
+}
 }

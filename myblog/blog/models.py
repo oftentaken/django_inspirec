@@ -4,6 +4,8 @@ from django.utils import timezone
 from django.urls import reverse
 from gallery.models import Gallery
 from tinymce.models import HTMLField
+from .utils import replace_polish_characters
+
 
 
 class Article(models.Model):
@@ -19,7 +21,8 @@ class Article(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title) if self.title.strip() else 'default-slug'
+            # Replace Polish characters in the title before creating the slug
+            self.slug = slugify(replace_polish_characters(self.title)) if self.title.strip() else 'default-slug'
         super(Article, self).save(*args, **kwargs)
 
     def __str__(self):
