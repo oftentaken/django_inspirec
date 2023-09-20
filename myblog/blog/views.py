@@ -34,12 +34,12 @@ def article_detail(request, slug):
     template_name = 'article_detail.html'
 
     menu_items = MenuItem.objects.filter(show_in_menu=True).order_by('order')
+
     context = {
         'article': article,
         'menu_items': menu_items,
     }
     return render(request, template_name, context)
-
 
 def bulk_upload(request, gallery_id):
     if request.method == 'POST':

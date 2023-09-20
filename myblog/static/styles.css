@@ -241,10 +241,6 @@ footer {
     padding: 1rem;
     text-align: center;
     width: 100%;
-    position: fixed; /* Change to fixed to make it sticky */
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 
@@ -261,11 +257,10 @@ main {
 
     /* Adjust footer placement on smaller screens */
     footer {
+        background-color: #f8f8f8;
+        padding: 1rem;
         text-align: center;
-        position: fixed; /* Change to fixed to make it sticky */
-        bottom: 0;
-        left: 0;
-        right: 0;
+        width: 100%;
     }
 
     /* Adjust content margin to prevent overlap with footer */
@@ -328,4 +323,36 @@ main {
 .article-detail .youtube-link a:hover {
     background-color: #0056b3;
 }
+}
+
+/* Gallery Styles */
+.gallery-section {
+    margin-top: 20px;
+    text-align: center; /* Center the gallery section */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.gallery-image {
+    flex-basis: calc(33.33% - 10px); /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add more spacing between images */
+}
+
+.gallery-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Add hover effect to gallery images */
+.gallery-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }

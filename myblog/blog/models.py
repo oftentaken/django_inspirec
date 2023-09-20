@@ -18,6 +18,8 @@ class Article(models.Model):
     show_on_home = models.BooleanField(default=False)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
+    gallery = models.ForeignKey(Gallery, on_delete=models.SET_NULL, null=True, blank=True)
+
 
     def save(self, *args, **kwargs):
         if not self.slug:

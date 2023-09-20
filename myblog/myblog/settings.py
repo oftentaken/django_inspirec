@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'gallery',
     'tinymce',
+    'multiupload',
 ]
 
 TINYMCE_DEFAULT_CONFIG = {

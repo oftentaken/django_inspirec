@@ -18,6 +18,19 @@
             <a href="{{ article.youtube_link }}" target="_blank">Link to YouTube Video</a>
         </div>
         {% endif %}
+
+        {% if article.gallery %}
+        <div class="gallery-section">
+            <h2>Gallery</h2>
+            <div class="image-gallery">
+                {% for image in article.gallery.images.all %}
+                <div class="gallery-image">
+                    <img src="{{ image.image.url }}" alt="{{ image.title }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
     </article>
 </div>
 {% endblock %}
