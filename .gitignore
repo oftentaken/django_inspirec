@@ -8,7 +8,7 @@ venv/
 .env
 
 # Ignore static files
-/static/
-/admin/
-/adminsortable2/
-/django_tinymce/
+myblog/static/admin
+myblog/static/tinymce/
+myblog/static/adminsortable2/
+myblog/static/django_tinymce/
