@@ -6,3 +6,9 @@ venv/
 
 # Ignore environment-specific configuration files
 .env
+
+# Ignore static files
+/static/
+/admin/
+/adminsortable2/
+/django_tinymce/
