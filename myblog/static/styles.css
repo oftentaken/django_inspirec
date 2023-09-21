@@ -53,13 +53,13 @@ header {
 
 /* Style for the menu icon */
 .menu-icon {
-    display: none; /* Hide the menu icon by default */
-    width: 30px; /* Adjust the size as needed */
+    display: none;
+    width: 30px;
     height: 30px;
     cursor: pointer;
-    margin-left: auto; /* Move the icon to the right */
-    order: 2; /* Change the order to make the icon appear on the right */
-    align-self: center; /* Vertically center the icon with the logo */
+    margin-left: auto;
+    order: 2;
+    align-self: center;
 }
 
 /* Show the menu icon on small screens */
@@ -69,28 +69,26 @@ header {
     }
 
     .menu-icon {
-        display: inline-block; /* Show the menu icon on small screens */
+        display: inline-block;
     }
 
-    /* Hide the regular menu on small screens */
+
     .menu ul {
         display: none;
     }
 
-    /* Style the mobile menu when it's open */
+
     .menu.open ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #fff; /* Add background color to menu for better visibility */
+        background-color: #fff;
         position: absolute;
-        top: 60px; /* Adjust the top position to align with header */
+        top: 60px;
         left: 0;
         width: 100%;
     }
 }
-
-
 
 
 /* Hide the dropdown menu on screens wider than 768px */
@@ -105,19 +103,19 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    position: absolute; /* Change to absolute */
-    top: 60px; /* Adjust the top position to align with header */
+    position: absolute;
+    top: 60px;
     left: 0;
     width: 100%;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border: 1px solid #ccc; /* Add a subtle border */
-    border-top: none; /* Remove the top border */
-    z-index: 1000; /* Add z-index to ensure it appears above other content */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1000;
 }
 
 /* Adjust the spacing between menu items */
 .menu.open ul li {
-    margin: 10px 0; /* Add margin to all sides of menu items */
+    margin: 10px 0;
 }
 
 /* Center header content on small screens */
@@ -129,7 +127,7 @@ header {
     /* Adjust footer placement on smaller screens */
     footer {
         text-align: center;
-        position: fixed; /* Change to fixed to make it sticky */
+        position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
@@ -138,7 +136,7 @@ header {
     /* Adjust content margin to prevent overlap with footer */
     main {
         margin-bottom: 2rem;
-        padding-bottom: 3rem; /* Add padding to make space for the footer */
+        padding-bottom: 3rem;
     }
 }
 
@@ -146,7 +144,7 @@ header {
     max-width: 100px;
     height: auto;
     display: block;
-    margin: 0 auto; /* Center the logo horizontally */
+    margin: 0 auto;
 }
 
 .container {
@@ -167,7 +165,7 @@ header {
     }
 
     footer {
-        text-align: center; /* Center the footer content horizontally */
+        text-align: center;
         position: relative;
         clear: both;
     }
@@ -178,7 +176,7 @@ header {
     gap: 20px;
     max-width: 1200px;
     margin: auto;
-    justify-content: center; /* Center the grid items horizontally */
+    justify-content: center;
 }
 
 /* Adjust grid columns for different screen sizes */
@@ -195,7 +193,7 @@ header {
 }
 
 .article {
-    border: none; /* Remove the border */
+    border: none;
     border-radius: 5px;
     padding: 1rem;
     max-width: 100%;
@@ -246,7 +244,7 @@ footer {
 
 /* Adjust content margin to prevent overlap with footer */
 main {
-    margin-bottom: 2rem; /* Adjust as needed */
+    margin-bottom: 2rem;
 }
 
 /* Center header content on small screens */
@@ -266,7 +264,7 @@ main {
     /* Adjust content margin to prevent overlap with footer */
     main {
         margin-bottom: 2rem;
-        padding-bottom: 3rem; /* Add padding to make space for the footer */
+        padding-bottom: 3rem;
     }
 }
 
@@ -302,7 +300,7 @@ main {
 
 .article-detail .youtube-link {
     margin-top: 2rem;
-    text-align: center; /* Center the text */
+    text-align: center;
 }
 
 .article-detail .youtube-link h2 {
@@ -312,12 +310,12 @@ main {
 
 .article-detail .youtube-link a {
     display: inline-block;
-    padding: 8px 16px; /* Adjust button padding for smaller size */
+    padding: 8px 16px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 14px; /* Adjust button font size for smaller size */
+    font-size: 14px;
 }
 
 .article-detail .youtube-link a:hover {
@@ -328,7 +326,7 @@ main {
 /* Gallery Styles */
 .gallery-section {
     margin-top: 20px;
-    text-align: center; /* Center the gallery section */
+    text-align: center;
 }
 
 .image-gallery {
@@ -340,9 +338,8 @@ main {
 }
 
 .gallery-image {
-    flex-basis: calc(33.33% - 10px); /* Adjust the width as needed */
-    margin-bottom: 20px; /* Add more spacing between images */
-}
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
 
 .gallery-image img {
     max-width: 100%;

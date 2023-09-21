@@ -30,7 +30,6 @@ def real_estate_page_detail(request, slug):
 def article_detail(request, slug):
     article = get_object_or_404(Article, slug=slug)
 
-    # Handle all types of articles in the same way
     template_name = 'article_detail.html'
 
     menu_items = MenuItem.objects.filter(show_in_menu=True).order_by('order')

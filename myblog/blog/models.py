@@ -23,7 +23,6 @@ class Article(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            # Replace Polish characters in the title before creating the slug
             self.slug = slugify(replace_polish_characters(self.title)) if self.title.strip() else 'default-slug'
         super(Article, self).save(*args, **kwargs)
 
@@ -77,7 +76,7 @@ class MenuItem(models.Model):
 class RealEstatePage(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    related_articles = models.ManyToManyField(Article)  # ManyToManyField to select articles related to real estate
+    related_articles = models.ManyToManyField(Article)
     slug = models.SlugField(unique=True, default='', editable=False)
 
     def save(self, *args, **kwargs):

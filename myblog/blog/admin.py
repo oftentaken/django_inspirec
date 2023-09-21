@@ -8,7 +8,7 @@ class PageAdminForm(forms.ModelForm):
         model = Page
         fields = '__all__'
         widgets = {
-            'content': TinyMCE(),  # Use the TinyMCE widget
+            'content': TinyMCE(),
         }
 
 @admin.register(Page)

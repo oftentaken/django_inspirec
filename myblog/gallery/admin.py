@@ -13,14 +13,12 @@ class GalleryAdmin(admin.ModelAdmin):
     inlines = [ImageInline]
 
     def get_form(self, request, obj=None, **kwargs):
-        # Customize the form to include bulk image upload field
         form = super().get_form(request, obj, **kwargs)
         if 'image' in form.base_fields:
-            form.base_fields['image'].widget.attrs['multiple'] = True  # Use the 'multiple' attribute
+            form.base_fields['image'].widget.attrs['multiple'] = True
         return form
 
     def save_model(self, request, obj, form, change):
-        # Handle the bulk image upload here and create Image objects
         if 'image' in request.FILES:
             for image in request.FILES.getlist('image'):
                 Image.objects.create(gallery=obj, image=image)

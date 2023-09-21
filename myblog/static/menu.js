@@ -20,8 +20,5 @@ function adjustFooterPosition() {
         }
     }
 
-    // Adjust the footer position when the window is resized
     window.addEventListener('resize', adjustFooterPosition);
-
-    // Initial adjustment when the page loads
     window.addEventListener('load', adjustFooterPosition);
