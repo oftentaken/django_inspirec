@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+{% for image in images %}
+  <img src="{{ image.optimized_image.url }}" alt="{{ image.gallery.title }}">
+{% endfor %}
 
+<!-- image_detail.html -->
+<img src="{{ image.optimized_image.url }}" alt="{{ image.gallery.title }}">
 </body>
 </html>

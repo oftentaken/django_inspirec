@@ -5,9 +5,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InspiREC - Videography by Marcin Brzozowski. We create stunning real estate videos and photos.">
+    <meta name="keywords" content="videography, real estate videos, real estate photos, Marcin Brzozowski, InspiREC">
+    <meta name="author" content="Marcin Brzozowski">
+
+    <link rel="canonical" href="{% url 'home' %}">
+
+    <meta property="og:title" content="InspiREC - Marcin Brzozowski">
+    <meta property="og:description" content="InspiREC - Videography by Marcin Brzozowski. We create stunning real estate videos and photos.">
+    <meta property="og:image" content="{% static 'images/og-image.jpg' %}">
+    <meta property="og:url" content="{% url 'home' %}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InspiREC - Marcin Brzozowski">
+    <meta name="twitter:description" content="InspiREC - Videography by Marcin Brzozowski. We create stunning real estate videos and photos.">
+    <meta name="twitter:image" content="{% static 'images/twitter-card-image.jpg' %}">
+
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <title>InspiREC - Marcin Brzozowski</title>
+
+    <title>InspiREC - Videography</title>
 </head>
 <body>
     <header>
