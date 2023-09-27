@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Article, Page, MenuItem, RealEstatePage
 
 def home(request):
-    articles = Article.objects.filter(show_on_home=True)  # Only get articles with show_on_home=True
+    articles = Article.objects.filter(show_on_home=True)
     menu_items = MenuItem.objects.filter(show_in_menu=True).order_by('order')
     context = {
         'articles': articles,
