@@ -18,8 +18,8 @@ class PageAdmin(admin.ModelAdmin):
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
+    form = PageAdminForm  # Register the custom form here
     list_display = ('title', 'created_at', 'updated_at')
-
 class MenuItemAdmin(admin.ModelAdmin):
     list_display = ['title', 'page', 'order', 'show_in_menu']
     ordering = ['order']

@@ -9,7 +9,7 @@
         </div>
 
         <div class="article-content">
-            <p>{{ article.content }}</p>
+            {{ article.content|safe }}
         </div>
 
         {% if article.youtube_link %}
